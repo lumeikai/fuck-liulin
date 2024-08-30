@@ -20,6 +20,9 @@ export default function Page() {
     });
     const res = await response.json();
     console.log(res);
+    let a = [1, 2, 3];
+    let b = [5, 6, 7];
+    a.filter((item, index, x) => console.log(item, index, x), b);
   };
   return (
     <div>

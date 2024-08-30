@@ -41,7 +41,6 @@ export async function POST(params: NextRequest) {
                 `INSERT INTO \`users\`(\`name\`, \`age\`, \`id\`) VALUES (?, ?, ?)`;
             const [result, fields] = await pool.query(sql, [item.name, Number(item.age), item.id]);
         });
-        // const [result, fields] = await pool.query(sql, []);
 
         return NextResponse.json({ data: status, status: 200 })
 
